@@ -27,7 +27,6 @@
     "react-native": "0.61.5",
     "react-native-appearance": "^0.3.2",
     "react-native-change-icon": "^2.0.1",
-    "react-native-firebase": "^5.6.0",
     "react-native-gesture-handler": "^1.5.6",
     "react-native-inappbrowser-reborn": "^3.4.0",
     "react-native-open-maps": "^0.3.5",
@@ -54,7 +53,6 @@
     "eslint-plugin-import": "^2.21.2",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-testing-library": "^3.3.1",
-    "husky": "^4.2.3",
     "jest": "^25.1.0",
     "lint-staged": "^10.1.1",
     "metro-react-native-babel-preset": "^0.58.0",
@@ -64,11 +62,6 @@
   },
   "jest": {
     "preset": "react-native"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && jest"
-    }
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
