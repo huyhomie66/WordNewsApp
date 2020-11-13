@@ -2,7 +2,6 @@ import { useTheme } from "@react-navigation/native";
 import { observer } from "mobx-react";
 import React, { useEffect, useContext, useState } from "react";
 import { TouchableOpacity } from "react-native";
-import firebase from "react-native-firebase";
 import styled from "styled-components";
 
 import BigTitle from "../common/BigTitle";
@@ -75,7 +74,6 @@ const SearchScreen = observer(({ navigation }) => {
   const [searchStr, setSearchStr] = useState("");
 
   useEffect(() => {
-    firebase.analytics().setCurrentScreen("SEARCH");
     searchStore.initStore();
   }, []);
 
@@ -92,7 +90,6 @@ const SearchScreen = observer(({ navigation }) => {
   } = searchStore;
 
   const launchSearch = (text: string) => {
-    firebase.analytics().logEvent("SEARCH", { value: text });
     searchLaunches(text);
   };
 
@@ -112,9 +109,8 @@ const SearchScreen = observer(({ navigation }) => {
           state === STATES.SUCCESS && (
             <>
               <ResultCount>{totalResults || 0} results</ResultCount>
-              {launchResults.map((data) => (
+              {launchResults.map((data, i) => (
                 <ResultCard
-                  key={data.id}
                   data={data}
                   showDetails={showDetails}
                 />
@@ -155,7 +151,7 @@ const SearchScreen = observer(({ navigation }) => {
                 }}
               >
                 <HistoryText>{item}</HistoryText>
-                <Icon name="ArrowUpLeft" color={colors.uiAccent} />
+                <Icon name="ArrowUpLeft" color={colors.primary} />
               </HistoryCard>
             ))}
           </>

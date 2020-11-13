@@ -1,7 +1,6 @@
 import { useTheme } from "@react-navigation/native";
 import React, { useEffect, useState, useContext } from "react";
 import { ScrollView, Linking, View, Animated } from "react-native";
-import firebase from "react-native-firebase";
 import openMap from "react-native-open-maps";
 import styled from "styled-components/native";
 
@@ -74,7 +73,6 @@ interface Props {
 
 const Details: React.FC<Props> = ({ route, navigation }) => {
   useEffect(() => {
-    firebase.analytics().logEvent("SEE_DETAILS", { value: data.name });
   }, []);
 
   const [scrollY] = useState(new Animated.Value(0));
@@ -103,9 +101,6 @@ const Details: React.FC<Props> = ({ route, navigation }) => {
         thumbColor: "#fa8435",
         disabled: !videoLink,
         action: () => {
-          firebase
-            .analytics()
-            .logEvent("OPEN_LIVESTREAM", { value: data.name });
           Linking.openURL(videoLink);
         },
       },
@@ -118,7 +113,6 @@ const Details: React.FC<Props> = ({ route, navigation }) => {
           const { latitude, longitude } = data.pad;
           const lat = parseFloat(latitude);
           const lon = parseFloat(longitude);
-          firebase.analytics().logEvent("OPEN_MAPS", { value: data.name });
           openMap({ latitude: lat, longitude: lon });
         },
       },
@@ -131,7 +125,6 @@ const Details: React.FC<Props> = ({ route, navigation }) => {
         disabled: !wikiLink,
         action: () => {
           openLink(wikiLink, appStateStore.browser);
-          firebase.analytics().logEvent("OPEN_WIKI", { value: data.name });
         },
       },
     ],
@@ -172,7 +165,7 @@ const Details: React.FC<Props> = ({ route, navigation }) => {
               </View>
               {data.launch_service_provider.name && (
                 <Row>
-                  <Icon name="Briefcase" color={colors.accent} size={20} />
+                  <Icon name="Briefcase" color={colors.primary} size={20} />
                   <PinLabel numberOfLines={2}>
                     {data.launch_service_provider.name}
                   </PinLabel>
@@ -180,7 +173,7 @@ const Details: React.FC<Props> = ({ route, navigation }) => {
               )}
               {data.net && (
                 <Row>
-                  <Icon name="Clock" color={colors.accent} size={20} />
+                  <Icon name="Clock" color={colors.primary} size={20} />
                   <PinLabel numberOfLines={2}>
                     {new Date(data.net).toLocaleString()}
                   </PinLabel>
@@ -188,7 +181,7 @@ const Details: React.FC<Props> = ({ route, navigation }) => {
               )}
               {data.pad.name && (
                 <Row>
-                  <Icon name="Pin" color={colors.accent} size={20} />
+                  <Icon name="Pin" color={colors.primary} size={20} />
                   <PinLabel numberOfLines={2}>
                     {data.pad.location.name}
                   </PinLabel>

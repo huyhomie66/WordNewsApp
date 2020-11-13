@@ -1,7 +1,6 @@
 import { useTheme } from "@react-navigation/native";
 import React, { useEffect, useContext } from "react";
 import { ScrollView, View } from "react-native";
-import firebase from "react-native-firebase";
 import styled from "styled-components/native";
 
 import Icon from "../common/Icon";
@@ -37,7 +36,6 @@ const Row = styled.View`
 
 const Licenses = () => {
   useEffect(() => {
-    firebase.analytics().setCurrentScreen("LICENSES");
   }, []);
 
   const { colors } = useTheme();
@@ -67,7 +65,7 @@ const Licenses = () => {
               />
             </Row>
           </View>
-          <Icon name="ChevronRight" color={colors.uiAccent} />
+          <Icon name="ChevronRight" color={colors.primary} />
         </ItemWrapper>
       ))}
     </ScrollView>

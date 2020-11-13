@@ -2,7 +2,6 @@ import { useNavigation, useTheme } from "@react-navigation/native";
 import { observer } from "mobx-react";
 import React, { useContext, useEffect, useState } from "react";
 import { ScrollView, View, Linking } from "react-native";
-import firebase from "react-native-firebase";
 import * as StoreReview from "react-native-store-review";
 import styled from "styled-components/native";
 
@@ -22,7 +21,6 @@ const BottomText = styled.Text`
 
 const Settings = observer(() => {
   useEffect(() => {
-    firebase.analytics().setCurrentScreen("SETTINGS");
   }, []);
 
   const navigation = useNavigation();
@@ -32,22 +30,14 @@ const Settings = observer(() => {
   const items = [
     [
       {
-        title: "Push Notifications",
-        preview: !launchesStore.notifications.enabled
-          ? "None"
-          : `${launchesStore.notifications.delay} minutes`,
-        icon: "ChevronRight",
-        action: () => navigation.navigate("Notifications"),
-      },
-      {
         title: "Appearance",
         icon: "ChevronRight",
         preview:
           appStateStore.theme === Themes.automatic
             ? "Automatic"
             : appStateStore.theme === Themes.light
-            ? "Light"
-            : "Dark",
+              ? "Light"
+              : "Dark",
         action: () => navigation.navigate("Appearance"),
       },
       {
@@ -67,64 +57,8 @@ const Settings = observer(() => {
       },
     ],
     [
-      {
-        title: "Rate the App",
-        icon: "ChevronRight",
-        action: () => {
-          if (StoreReview.isAvailable) {
-            firebase.analytics().logEvent("OPEN_REVIEW", { mode: "in-app" });
-            StoreReview.requestReview();
-          } else {
-            firebase.analytics().logEvent("OPEN_REVIEW", { mode: "link" });
-            Linking.openURL(
-              "https://itunes.apple.com/us/app/moonwalk-rocket-launches/id1439376174"
-            );
-          }
-        },
-      },
-      {
-        title: "Say hi 👋",
-        icon: "Twitter",
-        action: () => {
-          firebase.analytics().logEvent("OPEN_TWITTER", {});
-          Linking.openURL("https://twitter.com/MaximeNory");
-        },
-      },
-      {
-        title: "Report an issue",
-        icon: "ChevronRight",
-        action: () => {
-          firebase.analytics().logEvent("OPEN_ISSUE", {});
-          openLink(
-            "https://github.com/Illu/moonwalk/issues/new/choose",
-            appStateStore.browser
-          );
-        },
-      },
     ],
     [
-      {
-        title: "Licenses",
-        icon: "ChevronRight",
-        action: () => navigation.navigate("Licenses"),
-      },
-      {
-        title: "Source code",
-        icon: "Github",
-        action: () => {
-          firebase.analytics().logEvent("OPEN_SOURCECODE", {});
-          openLink("https://github.com/Illu/moonwalk", appStateStore.browser);
-        },
-      },
-      {
-        title: "About",
-        icon: "ChevronRight",
-        action: () => {
-          firebase.analytics().logEvent("OPEN_TOS", {});
-          openLink("https://maximenory.com/moonwalk/", appStateStore.browser);
-        },
-        preview: `v${Package.version}`,
-      },
     ],
   ];
 
@@ -161,7 +95,7 @@ const Settings = observer(() => {
       )}
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <ActionMenu items={items} />
-        <BottomText>2020 - Maxime Nory</BottomText>
+        <BottomText>2020 - HuyHomie</BottomText>
       </ScrollView>
     </View>
   );

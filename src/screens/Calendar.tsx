@@ -9,7 +9,6 @@ import {
   Button,
   View,
 } from "react-native";
-import firebase from "react-native-firebase";
 import styled from "styled-components/native";
 
 import ErrorCard from "../common/ErrorCard";
@@ -44,7 +43,6 @@ const Calendar: React.FC<Props> = observer(({ navigation }) => {
 
   useEffect(() => {
     refreshCalendar();
-    firebase.analytics().setCurrentScreen("CALENDAR");
   }, []);
 
   const loadMore = () => {
@@ -68,57 +66,58 @@ const Calendar: React.FC<Props> = observer(({ navigation }) => {
 
   let titleIndex = 0;
   const sectionTitles = ["Scheduled", "To be Determined"];
+  console.log(launchesStore.launches)
 
   return (
     <Wrapper>
       {launchesStore.state === STATES.LOADING &&
-      launchesStore.numberOfLaunches < 5 ? (
-        <Loader />
-      ) : (
-        <FlatList
-          style={{ paddingTop: 20 }}
-          data={launchesStore.launches}
-          keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => {
-            const showTitle =
-              titleIndex === 0 ||
-              (new Date(item.net).getTime() / 1000 === 0 && titleIndex === 1);
-            if (showTitle) titleIndex++;
-            return (
-              <>
-                {showTitle && <Title>{sectionTitles[titleIndex - 1]}</Title>}
-                <TouchableOpacity
-                  key={item.id}
-                  onPress={() => navigation.navigate("Details", { data: item })}
-                >
-                  <CalendarCard data={item} isFirst={showTitle} />
-                </TouchableOpacity>
-              </>
-            );
-          }}
-          ListFooterComponent={() => (
-            <View style={{ margin: 20 }}>
-              {showMoreEnabled &&
-                (launchesStore.state === STATES.LOADING ? (
-                  <ActivityIndicator />
-                ) : (
-                  <Button
-                    title="Load more"
-                    onPress={loadMore}
-                    disabled={launchesStore.state === STATES.LOADING}
-                  />
-                ))}
-            </View>
-          )}
-          refreshControl={
-            <RefreshControl
-              refreshing={launchesStore.state === STATES.LOADING && page === 0}
-              onRefresh={refreshCalendar}
-              tintColor={colors.text}
-            />
-          }
-        />
-      )}
+        launchesStore.numberOfLaunches < 5 ? (
+          <Loader />
+        ) : (
+          <FlatList
+            style={{ paddingTop: 20 }}
+            data={launchesStore.launches}
+            keyExtractor={(item) => item.id.toString()}
+            renderItem={({ item }) => {
+              const showTitle =
+                titleIndex === 0 ||
+                (new Date(item.net).getTime() / 1000 === 0 && titleIndex === 1);
+              if (showTitle) titleIndex++;
+              return (
+                <>
+                  {showTitle && <Title>{sectionTitles[titleIndex - 1]}</Title>}
+                  <TouchableOpacity
+                    key={item.id}
+                    onPress={() => navigation.navigate("Details", { data: item })}
+                  >
+                    <CalendarCard data={item} isFirst={showTitle} />
+                  </TouchableOpacity>
+                </>
+              );
+            }}
+            ListFooterComponent={() => (
+              <View style={{ margin: 20 }}>
+                {showMoreEnabled &&
+                  (launchesStore.state === STATES.LOADING ? (
+                    <ActivityIndicator />
+                  ) : (
+                      <Button
+                        title="Load more"
+                        onPress={loadMore}
+                        disabled={launchesStore.state === STATES.LOADING}
+                      />
+                    ))}
+              </View>
+            )}
+            refreshControl={
+              <RefreshControl
+                refreshing={launchesStore.state === STATES.LOADING && page === 0}
+                onRefresh={refreshCalendar}
+                tintColor={colors.text}
+              />
+            }
+          />
+        )}
     </Wrapper>
   );
 });

@@ -16,22 +16,7 @@
 		67972AC594724E01BFAA4A4B /* Quicksand-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9ED045F782AE487C87436AC8 /* Quicksand-SemiBold.ttf */; };
 		87FAA3ED61884E6496A7BAA4 /* Quicksand-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 038ADF0CC6D54B91AA7EB6CA /* Quicksand-Regular.ttf */; };
 		9C4BB37B242C0F07006DA12A /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 008F07F21AC5B25A0029DE68 /* main.jsbundle */; };
-		9C697327240C518500E12C34 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9C697326240C518400E12C34 /* GoogleService-Info.plist */; };
-		9C97849624E9BA5500062AFC /* logo_darkblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848724E9BA5000062AFC /* logo_darkblue.png */; };
-		9C97849724E9BA5500062AFC /* logo_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848824E9BA5100062AFC /* logo_black.png */; };
-		9C97849824E9BA5500062AFC /* logo_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848924E9BA5100062AFC /* logo_white@3x.png */; };
-		9C97849924E9BA5500062AFC /* logo_milkyway.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848A24E9BA5100062AFC /* logo_milkyway.png */; };
-		9C97849A24E9BA5500062AFC /* logo_black@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848B24E9BA5200062AFC /* logo_black@3x.png */; };
-		9C97849B24E9BA5500062AFC /* logo_lightblue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848C24E9BA5200062AFC /* logo_lightblue@2x.png */; };
-		9C97849C24E9BA5500062AFC /* logo_darkblue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848D24E9BA5300062AFC /* logo_darkblue@2x.png */; };
-		9C97849D24E9BA5500062AFC /* logo_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848E24E9BA5300062AFC /* logo_white@2x.png */; };
-		9C97849E24E9BA5500062AFC /* logo_black@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97848F24E9BA5300062AFC /* logo_black@2x.png */; };
-		9C97849F24E9BA5500062AFC /* logo_milkyway@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97849024E9BA5300062AFC /* logo_milkyway@2x.png */; };
-		9C9784A024E9BA5500062AFC /* logo_darkblue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97849124E9BA5400062AFC /* logo_darkblue@3x.png */; };
-		9C9784A124E9BA5500062AFC /* logo_lightblue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97849224E9BA5400062AFC /* logo_lightblue@3x.png */; };
-		9C9784A224E9BA5500062AFC /* logo_lightblue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97849324E9BA5400062AFC /* logo_lightblue.png */; };
-		9C9784A324E9BA5500062AFC /* logo_milkyway@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97849424E9BA5500062AFC /* logo_milkyway@3x.png */; };
-		9C9784A424E9BA5500062AFC /* logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C97849524E9BA5500062AFC /* logo_white.png */; };
+		9C697327240C518500E12C34 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		9CB7EBEF242D690E00F322D4 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB7EBEE242D690E00F322D4 /* assets */; };
 		AADC7F1D198A025EFDB8DEF7 /* libPods-moonwalk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 554FF0BF5C86F4F90CBA6227 /* libPods-moonwalk.a */; };
 		BC481920048245AD848BF5C1 /* Quicksand-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DF28AF6EC2F47089F5F8A93 /* Quicksand-Bold.ttf */; };
@@ -58,21 +43,6 @@
 		70F1D56C625C1DAD02FC1AAA /* Pods-moonwalkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moonwalkTests.debug.xcconfig"; path = "Target Support Files/Pods-moonwalkTests/Pods-moonwalkTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7DC88DBDB1BA7FA91BBB132B /* Pods-moonwalk.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moonwalk.debug.xcconfig"; path = "Target Support Files/Pods-moonwalk/Pods-moonwalk.debug.xcconfig"; sourceTree = "<group>"; };
 		931F241EEFA54D361B361815 /* libPods-moonwalkTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-moonwalkTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C97848724E9BA5000062AFC /* logo_darkblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_darkblue.png; sourceTree = "<group>"; };
-		9C97848824E9BA5100062AFC /* logo_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_black.png; sourceTree = "<group>"; };
-		9C97848924E9BA5100062AFC /* logo_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_white@3x.png"; sourceTree = "<group>"; };
-		9C97848A24E9BA5100062AFC /* logo_milkyway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_milkyway.png; sourceTree = "<group>"; };
-		9C97848B24E9BA5200062AFC /* logo_black@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_black@3x.png"; sourceTree = "<group>"; };
-		9C97848C24E9BA5200062AFC /* logo_lightblue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_lightblue@2x.png"; sourceTree = "<group>"; };
-		9C97848D24E9BA5300062AFC /* logo_darkblue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_darkblue@2x.png"; sourceTree = "<group>"; };
-		9C97848E24E9BA5300062AFC /* logo_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_white@2x.png"; sourceTree = "<group>"; };
-		9C97848F24E9BA5300062AFC /* logo_black@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_black@2x.png"; sourceTree = "<group>"; };
-		9C97849024E9BA5300062AFC /* logo_milkyway@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_milkyway@2x.png"; sourceTree = "<group>"; };
-		9C97849124E9BA5400062AFC /* logo_darkblue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_darkblue@3x.png"; sourceTree = "<group>"; };
-		9C97849224E9BA5400062AFC /* logo_lightblue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_lightblue@3x.png"; sourceTree = "<group>"; };
-		9C97849324E9BA5400062AFC /* logo_lightblue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_lightblue.png; sourceTree = "<group>"; };
-		9C97849424E9BA5500062AFC /* logo_milkyway@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo_milkyway@3x.png"; sourceTree = "<group>"; };
-		9C97849524E9BA5500062AFC /* logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_white.png; sourceTree = "<group>"; };
 		9CB7EBEE242D690E00F322D4 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 		9ED045F782AE487C87436AC8 /* Quicksand-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Quicksand-SemiBold.ttf"; path = "../assets/fonts/Quicksand-SemiBold.ttf"; sourceTree = "<group>"; };
 		A33801C76B272BE6ED216303 /* Pods-moonwalk.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moonwalk.release.xcconfig"; path = "Target Support Files/Pods-moonwalk/Pods-moonwalk.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,8 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				9CB7EBEE242D690E00F322D4 /* assets */,
-				9CC646C6242BCA930087DAC0 /* App Icons */,
-				9C697326240C518400E12C34 /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -188,28 +156,6 @@
 				13B07F961A680F5B00A75B9A /* Moonwalk.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		9CC646C6242BCA930087DAC0 /* App Icons */ = {
-			isa = PBXGroup;
-			children = (
-				9C97848824E9BA5100062AFC /* logo_black.png */,
-				9C97848F24E9BA5300062AFC /* logo_black@2x.png */,
-				9C97848B24E9BA5200062AFC /* logo_black@3x.png */,
-				9C97848724E9BA5000062AFC /* logo_darkblue.png */,
-				9C97848D24E9BA5300062AFC /* logo_darkblue@2x.png */,
-				9C97849124E9BA5400062AFC /* logo_darkblue@3x.png */,
-				9C97849324E9BA5400062AFC /* logo_lightblue.png */,
-				9C97848C24E9BA5200062AFC /* logo_lightblue@2x.png */,
-				9C97849224E9BA5400062AFC /* logo_lightblue@3x.png */,
-				9C97848A24E9BA5100062AFC /* logo_milkyway.png */,
-				9C97849024E9BA5300062AFC /* logo_milkyway@2x.png */,
-				9C97849424E9BA5500062AFC /* logo_milkyway@3x.png */,
-				9C97849524E9BA5500062AFC /* logo_white.png */,
-				9C97848E24E9BA5300062AFC /* logo_white@2x.png */,
-				9C97848924E9BA5100062AFC /* logo_white@3x.png */,
-			);
-			name = "App Icons";
 			sourceTree = "<group>";
 		};
 		FF887B6A415D4DCC94B6BF6E /* Resources */ = {
@@ -287,30 +233,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C4BB37B242C0F07006DA12A /* main.jsbundle in Resources */,
-				9C9784A324E9BA5500062AFC /* logo_milkyway@3x.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				9C9784A224E9BA5500062AFC /* logo_lightblue.png in Resources */,
-				9C97849B24E9BA5500062AFC /* logo_lightblue@2x.png in Resources */,
-				9C9784A424E9BA5500062AFC /* logo_white.png in Resources */,
-				9C97849D24E9BA5500062AFC /* logo_white@2x.png in Resources */,
-				9C9784A024E9BA5500062AFC /* logo_darkblue@3x.png in Resources */,
-				9C697327240C518500E12C34 /* GoogleService-Info.plist in Resources */,
-				9C97849924E9BA5500062AFC /* logo_milkyway.png in Resources */,
-				9C97849C24E9BA5500062AFC /* logo_darkblue@2x.png in Resources */,
+				9C697327240C518500E12C34 /* (null) in Resources */,
 				9CB7EBEF242D690E00F322D4 /* assets in Resources */,
-				9C9784A124E9BA5500062AFC /* logo_lightblue@3x.png in Resources */,
-				9C97849824E9BA5500062AFC /* logo_white@3x.png in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				BC481920048245AD848BF5C1 /* Quicksand-Bold.ttf in Resources */,
 				64A2F1B2416A49E2A2DDC90F /* Quicksand-Light.ttf in Resources */,
-				9C97849F24E9BA5500062AFC /* logo_milkyway@2x.png in Resources */,
 				5995DF238BBF43559DA04BA6 /* Quicksand-Medium.ttf in Resources */,
 				87FAA3ED61884E6496A7BAA4 /* Quicksand-Regular.ttf in Resources */,
 				67972AC594724E01BFAA4A4B /* Quicksand-SemiBold.ttf in Resources */,
-				9C97849E24E9BA5500062AFC /* logo_black@2x.png in Resources */,
-				9C97849724E9BA5500062AFC /* logo_black.png in Resources */,
-				9C97849624E9BA5500062AFC /* logo_darkblue.png in Resources */,
-				9C97849A24E9BA5500062AFC /* logo_black@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

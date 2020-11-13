@@ -2,13 +2,7 @@ import { observer } from "mobx-react";
 import React, { useContext } from "react";
 import { ScrollView } from "react-native";
 import { changeIcon } from "react-native-change-icon";
-import firebase from "react-native-firebase";
 
-import LogoBlackImage from "../../ios/logo_black.png";
-import LogoDarkblueImage from "../../ios/logo_darkblue.png";
-import LogoLightblueImage from "../../ios/logo_lightblue.png";
-import LogoMilkywayImage from "../../ios/logo_milkyway.png";
-import LogoWhiteImage from "../../ios/logo_white.png";
 import ActionMenu from "../common/ActionMenu";
 import AppState from "../stores/AppState";
 import { Themes } from "../types";
@@ -22,7 +16,6 @@ const AppIconSettings = observer(() => {
         appStateStore.setAppIcon(newIconName);
       }
     });
-    firebase.analytics().logEvent("SWITCH_ICON", { value: newIconName });
   };
 
   const items = [
@@ -30,32 +23,26 @@ const AppIconSettings = observer(() => {
       {
         title: "Default",
         icon: appStateStore.appIcon === "Default" ? "CheckCircle" : "Circle",
-        thumbImage: LogoWhiteImage,
+        thumbImage: require('../../assets/Images/app-icon.png'),
         action: () => switchIcon("logo_white", "Default"),
       },
       {
         title: "Deep Space",
         icon: appStateStore.appIcon === "Deep Space" ? "CheckCircle" : "Circle",
-        thumbImage: LogoBlackImage,
+        thumbImage: require('../../assets/Images/app-icon-dark.png'),
         action: () => switchIcon("logo_black", "Deep Space"),
       },
       {
         title: "Supernova",
         icon: appStateStore.appIcon === "Supernova" ? "CheckCircle" : "Circle",
-        thumbImage: LogoDarkblueImage,
+        thumbImage: require('../../assets/Images/app-icon-darkblue.png'),
         action: () => switchIcon("logo_darkblue", "Supernova"),
       },
       {
         title: "Oxygen",
         icon: appStateStore.appIcon === "Oxygen" ? "CheckCircle" : "Circle",
-        thumbImage: LogoLightblueImage,
+        thumbImage: require('../../assets/Images/app-icon-lightblue.png'),
         action: () => switchIcon("logo_lightblue", "Oxygen"),
-      },
-      {
-        title: "Milky Way",
-        icon: appStateStore.appIcon === "Milky Way" ? "CheckCircle" : "Circle",
-        thumbImage: LogoMilkywayImage,
-        action: () => switchIcon("logo_milkyway", "Milky Way"),
       },
     ],
   ];

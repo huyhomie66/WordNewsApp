@@ -3,8 +3,8 @@ import { Dimensions } from "react-native";
 import { useColorScheme } from "react-native-appearance";
 import styled from "styled-components/native";
 
-import BlackLogo from "../../assets/Images/logo_black.png";
-import WhiteLogo from "../../assets/Images/logo_white.png";
+import BlackLogo from "../../assets/Images/app-icon.png";
+import WhiteLogo from "../../assets/Images/app-icon-dark.png";
 import AppState from "../stores/AppState";
 import { Themes } from "../types";
 
