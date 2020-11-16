@@ -1,5 +1,5 @@
 {
-  "name": "K9WIN",
+  "name": "moonwalk",
   "version": "2.2.0",
   "private": true,
   "repository": "https://github.com/Illu/moonwalk",
@@ -15,6 +15,8 @@
     "prettier-check": "prettier --debug-check '**/*.{js,jsx,ts,tsx,vue,json,css,scss,less,md,mdx,graphql}'"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.13.2",
+    "@react-native-community/art": "^1.2.0",
     "@react-native-community/async-storage": "^1.8.1",
     "@react-native-community/masked-view": "^0.1.6",
     "@react-native-community/push-notification-ios": "^1.1.0",
@@ -36,6 +38,7 @@
     "react-native-gesture-handler": "^1.5.6",
     "react-native-inappbrowser-reborn": "^3.4.0",
     "react-native-open-maps": "^0.3.5",
+    "react-native-progress": "^4.1.2",
     "react-native-push-notification": "^3.1.9",
     "react-native-reanimated": "^1.7.0",
     "react-native-safe-area-context": "^0.7.2",

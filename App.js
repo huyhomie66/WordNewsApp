@@ -1,13 +1,13 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer, useTheme } from "@react-navigation/native";
 import { observer } from "mobx-react";
-import React, { useContext } from "react";
+import React, { useContext, Suspense } from "react";
 import { StatusBar } from "react-native";
 import { AppearanceProvider, useColorScheme } from "react-native-appearance";
 import { enableScreens } from "react-native-screens";
 import { createNativeStackNavigator } from "react-native-screens/native-stack";
 import { ThemeProvider } from "styled-components/native";
-import { createStackNavigator } from '@react-navigation/stack';
+import { createStackNavigator } from "@react-navigation/stack";
 
 import HeaderSettingsButton from "./src/components/HeaderSettingsButton";
 import Tabbar from "./src/components/Tabbar";
@@ -24,9 +24,10 @@ import Licenses from "./src/screens/Licenses";
 import AppState from "./src/stores/AppState";
 import { Themes } from "./src/types";
 import AppIconSettings from "./src/screens/AppIconSettings";
-import K9 from './src/screens/K9'
-import WebView from './src/screens/WebView'
-
+import useCodePush from "./src/hooks/useCodePush";
+import CodePush from "react-native-code-push";
+import Plash from "./src/components/Plash";
+import KuApp from "./src/KuApp/Home";
 enableScreens();
 
 const Tab = createBottomTabNavigator();
@@ -161,30 +162,14 @@ const App = observer(() => {
   );
 });
 
-const Stack = createStackNavigator();
-
-const K9APP = () => {
+const AppContainer = () => {
+  const { hasUpdate, progress, synced } = useCodePush();
   return (
-    <NavigationContainer >
-      <Stack.Navigator>
-        <Stack.Screen
-          name="Home"
-          component={K9}
-          options={{ headerShown: false }}
-        />
-        <Stack.Screen
-          name="WebView"
-          component={WebView}
-          options={{
-            headerShown: false,
-            title: null, headerStyle: { backgroundColor: "black" }, headerTitleStyle: { color: "white" }
-          }}
-
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Suspense>
+      {synced && <KuApp />}
+      {!synced && <Plash hasUpdate={hasUpdate} progress={progress} />}
+    </Suspense>
   );
 };
 
-
-export default App;
+export default CodePush(AppContainer);
